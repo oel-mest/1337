@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 19:54:43 by oel-mest          #+#    #+#             */
-/*   Updated: 2024/12/08 19:55:43 by oel-mest         ###   ########.fr       */
+/*   Updated: 2024/12/09 20:41:13 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	send_char(char c, pid_t server_pid)
 		else
 			improved_kill(server_pid, SIGUSR2);
 		bit++;
-		usleep(50);
+		usleep(100);
 	}
 }
 

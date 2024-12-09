@@ -1,9 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/09 21:20:54 by oel-mest          #+#    #+#              #
+#    Updated: 2024/12/09 21:20:54 by oel-mest         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC       = cc
 CFLAGS   = -Wall -Wextra -Werror
 FT_PRINTF_DIR = ft_printf
 FT_PRINTF_LIB = $(FT_PRINTF_DIR)/libftprintf.a
 
-UTILS_SRC = utils.c utils_1.c utils_2.c
+UTILS_SRC = utils.c utils_1.c utils_2.c utils_3.c
 UTILS_OBJ = $(UTILS_SRC:.c=.o)
 
 SERVER_SRC = server.c
@@ -43,4 +55,6 @@ fclean: clean
 	$(MAKE) -C $(FT_PRINTF_DIR) fclean
 	$(RM) $(SERVER_BIN) $(CLIENT_BIN)
 
-re: all clean fclean
+re: fclean all
+
+.PHONY: all clean fclean re
