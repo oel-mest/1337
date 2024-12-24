@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 19:54:43 by oel-mest          #+#    #+#             */
-/*   Updated: 2024/12/09 20:41:13 by oel-mest         ###   ########.fr       */
+/*   Updated: 2024/12/23 16:20:50 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	send_char(char c, pid_t server_pid)
 		else
 			improved_kill(server_pid, SIGUSR2);
 		bit++;
-		usleep(100);
+		usleep(50);
 	}
 }
 
@@ -54,4 +54,13 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	return (b);
+}
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	while (*s)
+		write (fd, s++, 1);
+	write (fd, "\n", 1);
 }

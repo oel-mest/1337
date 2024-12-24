@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 20:24:57 by oel-mest          #+#    #+#             */
-/*   Updated: 2024/12/09 21:11:36 by oel-mest         ###   ########.fr       */
+/*   Updated: 2024/12/23 16:35:50 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,13 @@ int	ftput_endl(char **g_str, int *taille)
 	free(original);
 	*g_str = NULL;
 	return (0);
+}
+
+void	improved_kill(pid_t pid, int signum)
+{
+	if (kill(pid, signum) < 0)
+	{
+		ft_putendl_fd ("❌ Wrong PID", STDERR_FILENO);
+		exit (EXIT_FAILURE);
+	}
 }

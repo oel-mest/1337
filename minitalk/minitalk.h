@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 16:35:40 by oel-mest          #+#    #+#             */
-/*   Updated: 2024/12/09 21:11:50 by oel-mest         ###   ########.fr       */
+/*   Updated: 2024/12/23 15:45:12 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,8 @@
 # include <stdlib.h>
 # include <limits.h>
 
-typedef struct s_list{
-	char			c;
-	struct s_list	*next;
-}	t_list;
-
 int		ft_printf(const char *str, ...);
-t_list	*new_node(char c);
-void	add_back(t_list **lst, t_list *new_node);
-void	ft_lstclear(t_list **lst);
-void	print_list(t_list *head);
+void	ft_putendl_fd(char *s, int fd);
 void	improved_kill(pid_t pid, int signum);
 int		ft_atoi(const char *str);
 void	send_char(char c, pid_t server_pid);

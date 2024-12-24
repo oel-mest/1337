@@ -6,7 +6,7 @@
 /*   By: oel-mest <oel-mest@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 16:47:52 by oel-mest          #+#    #+#             */
-/*   Updated: 2024/12/09 21:15:26 by oel-mest         ###   ########.fr       */
+/*   Updated: 2024/12/23 15:48:01 by oel-mest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,12 @@ int	main(void)
 	if (sigaction(SIGUSR1, &sa, NULL) == -1
 		|| sigaction(SIGUSR2, &sa, NULL) == -1)
 	{
-		ft_printf("sigaction failed");
+		ft_putendl_fd ("❌ Sigaction failed\n", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
 	ft_printf("✅ Server started\n🧠 PID : %d\n", getpid());
 	ft_printf("⌛ Listening ...\n");
-	while (42)
-	{
+	while (1337)
 		pause();
-	}
 	return (EXIT_SUCCESS);
 }
