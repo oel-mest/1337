@@ -16,15 +16,13 @@ All projects are coded from scratch in **C, C++, and other languages** following
 - **get_next_line** – Read a file line by line efficiently  
 - **ft_printf** – Reimplementation of the `printf` function  
 - **Born2beroot** – Linux system administration basics  
-- **so_long** – 2D game with graphics (minilibX)  
+- **fract-ol** – Fractal renderer (Mandelbrot, Julia sets) with minilibX  
 - **push_swap** – Sorting algorithm with stacks and limited instructions  
-- **pipex** – Reproduce shell pipes behavior  
+- **minitalk** – Client/server communication using UNIX signals  
 - **Philosophers** – Dining philosophers problem (threads & mutexes)  
-- **minishell** – Mini UNIX shell (parsing, signals, pipes, redirections)  
 - **cub3d** – 3D raycasting engine (like Wolfenstein 3D) with textures, sprites, doors  
 - **NetPractice** – Networking fundamentals  
-- **ft_irc** – Internet Relay Chat server in C++  
-- **CPP00 – CPP04** – C++ OOP modules (classes, inheritance, polymorphism)  
+- **CPP00 – CPP04** – C++ OOP modules (classes, inheritance, polymorphism, operator overloading)  
 
 ---
 
@@ -33,5 +31,5 @@ Clone the repo and navigate to the desired project:
 
 ```bash
 git clone https://github.com/oel-mest/1337.git
-cd 1337/{project}
+cd 1337/<project>
 make
